@@ -9,7 +9,7 @@ load_dotenv()
 
 #assigns the api variable to the key in the .env  file
 API_KEY =(os.environ["API_KEY"])
-
+BEARER =(os.environ["BEARER"])
 #url + the api key variable to access the data
 #url = f"https://api.themoviedb.org/3/movie/550?api_key={API_KEY}"
 
@@ -29,7 +29,7 @@ params = {
 #assigns the content type (output request)
 header={"Content-Type":"application/json",
         "Accept-Encoding":"deflate",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4Njc2NWEyN2ZkMDE1YzM4ZjZjZWNlZWFjODIwNTQwMyIsInN1YiI6IjY1OGY2N2M1ZDM2M2U1NTBmOTA5ZDcyOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.AZQ1bf7GxLyoMr4kIhINLSmJsjvHc3hhyYui4qbE7Cw"}
+        "Authorization": "Bearer ={BEARER}"}
 
 response = requests.get(url, headers=header, params=params)
 data = response.json()
