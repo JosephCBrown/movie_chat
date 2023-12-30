@@ -1,0 +1,7 @@
+requests
+pandas
+sqlalchemy
+openai
+chainlit
+langchain
+google-cloud-bigquery
